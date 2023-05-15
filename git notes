@@ -16,3 +16,6 @@ alias git-log='git log --pretty=oneline --all --graph --abbrev-commit --decorate
 本地仓库关联远程仓库：git remote add origin 远程仓库地址
 获取连接远程仓库权限：git remote set-url origin https://[your GitHub token]@github.com/[your user name]/[your repositories nam].git
 将本地仓库的main分支推给远程仓库origin： git push origin main
+建立本地分支与远程分支的映射关系： git push --set-upstream origin main:main
+使用该命令以后可以直接使用git push命令将本地的main分支推给远程origin的main分支
+
