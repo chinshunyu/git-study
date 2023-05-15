@@ -14,3 +14,5 @@ alias git-log='git log --pretty=oneline --all --graph --abbrev-commit --decorate
 合并分支（将某分支合并到当前所在的分支上）：git merge 分支名
 删除分支：git branch -d 分支名
 本地仓库关联远程仓库：git remote add origin 远程仓库地址
+获取连接远程仓库权限：git remote set-url origin https://[your GitHub token]@github.com/[your user name]/[your repositories nam].git
+将本地仓库的main分支推给远程仓库origin： git push origin main
