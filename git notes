@@ -1,0 +1,16 @@
+alias git-log='git log --pretty=oneline --all --graph --abbrev-commit --decorate'
+
+初始化仓库：git init
+添加到暂存区：git add .
+提交到仓库：git commit -m "描述信息"
+查看状态：git status
+查看提交日志： git-log
+版本回退：git reset --hard commitID
+其中commitID可以通过git log查看
+让git忽略管理某些文件：创建 .gitignore文件，并在该文件中写入想忽略的文件名
+查看分支：git branch
+创建分支：git branch 分支名
+切换分支：git checkout 分支名
+合并分支（将某分支合并到当前所在的分支上）：git merge 分支名
+删除分支：git branch -d 分支名
+本地仓库关联远程仓库：git remote add origin 远程仓库地址
