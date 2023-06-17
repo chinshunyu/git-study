@@ -14,8 +14,26 @@ alias git-log='git log --pretty=oneline --all --graph --abbrev-commit --decorate
 合并分支（将某分支合并到当前所在的分支上）：git merge 分支名
 删除分支：git branch -d 分支名
 本地仓库关联远程仓库：git remote add origin 远程仓库地址
-获取连接远程仓库权限：git remote set-url origin https://[your GitHub token]@github.com/[your user name]/[your repositories nam].git
+获取连接远程仓库权限：git remote set-url origin https://[your GitHub token]@github.com/[your user name]/[your repositories name].git
 将本地仓库的main分支推给远程仓库origin： git push origin main
 建立本地分支与远程分支的映射关系： git push --set-upstream origin main:main
 使用该命令以后可以直接使用git push命令将本地的main分支推给远程origin的main分支
 
+
+将远程的feature分支merge到远程main分支：
+思路：
+1.从远程克隆完整项目到本地
+2.将本地feature分支merge到本地的main分支
+3.将本地的main分支推给远程main分支
+
+操作：
+1.git clone https://github.com/chinshunyu/git-study.git
+2.git checkout -b feature
+3.git pull origin feature:feature
+4.git checkout main
+5.git merge feature
+6.此时如果有冲突，用vscode打开项目解决冲突（command+shift+p 搜索next conflict 点击项目文件右边“+”号 stage changes）
+7.在vscode中commit或者在git bash中git commit
+8.git push origin main:main
+
+私密仓库带token克隆：git clone https://[username]:[token]@github.com/[username]/[project name].git
